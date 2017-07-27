@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <form method = 'post' enctype="multipart/form-data"  class="reg-form" >
+         <h1>登录账号
+              <span>请填好每一个输入框.</span>
+         </h1>
+         {% csrf_token %}
+         {{ error.0 }}
+         {{uf.as_p}}
+         <input type="submit" value = "立即登录" />
+        <div class="login-reg">
+            没有账号，直接<a href="register">注册</a>
+        </div>
+    </form>
+    <div class="cpright">
+    <div >Copyright © 2017 浙江工商大学信息学院508实验室</div>
+    </div>
+
+{% endblock %}
